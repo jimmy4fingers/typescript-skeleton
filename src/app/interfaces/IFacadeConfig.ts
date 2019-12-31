@@ -1,5 +1,7 @@
+import IController from "./IController";
+
 export default interface IFacadeConfig {
   port: number;
-  controllers: any[];
+  controllers: IController[];
   middleware: any[];
 }
