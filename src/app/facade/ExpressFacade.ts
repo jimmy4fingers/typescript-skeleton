@@ -1,8 +1,10 @@
 import express, { Application } from "express";
 
+import IController from "../interfaces/IController";
 import IFacadeConfig from "../interfaces/IFacadeConfig";
 
 class ExpressFacade {
+
   public app: Application;
   public port: number;
 
@@ -22,8 +24,8 @@ class ExpressFacade {
     const assignMiddleware = (item: any) => {
       this.app.use(item);
     };
-    const assignRoutes = (item: any) => {
-      this.app.use("/", item);
+    const assignRoutes = (controller: IController) => {
+      this.app.use(controller.path, controller.router);
     };
     config.middleware.map(assignMiddleware);
     config.controllers.map(assignRoutes);

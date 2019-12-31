@@ -1,10 +1,10 @@
-import * as express from "express";
+import Router, { IRouter, Request, Response } from "express";
 
 import IController from "../interfaces/IController";
 
 class Controller implements IController {
 
-  public router: express.IRouter = express.Router();
+  public router: IRouter = Router();
   public path: string = "/";
 
   constructor() {
@@ -15,7 +15,7 @@ class Controller implements IController {
     this.router.get(this.path, this.handler);
   }
 
-  public handler = (request: express.Request, response: express.Response) => {
+  public handler = (request: Request, response: Response) => {
     response.send({ content: "hello there." });
   }
 }
