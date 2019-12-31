@@ -1,7 +1,11 @@
-import IController from "./IController";
+import IController from './IController';
 
-export default interface IFacadeConfig {
+type MiddlewareFunction = (...args: any[]) => void;
+
+interface IFacadeConfig {
   port: number;
   controllers: IController[];
-  middleware: any[];
+  middleware: MiddlewareFunction[];
 }
+
+export default IFacadeConfig;
