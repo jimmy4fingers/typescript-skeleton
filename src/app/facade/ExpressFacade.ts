@@ -1,8 +1,8 @@
-import HandleFunction from "connect";
-import express, { Application } from "express";
+import HandleFunction from 'connect';
+import express, { Application } from 'express';
 
-import IController from "../interfaces/IController";
-import IFacadeConfig from "../interfaces/IFacadeConfig";
+import IController from '../interfaces/IController';
+import IFacadeConfig from '../interfaces/IFacadeConfig';
 
 class ExpressFacade {
 
@@ -16,9 +16,7 @@ class ExpressFacade {
   }
 
   public listen() {
-    this.app.listen(this.port, () => {
-      // console.log(`App listening on the http://localhost:${this.port}`);
-    });
+    this.app.listen(this.port);
   }
 
   private config(config: IFacadeConfig) {
