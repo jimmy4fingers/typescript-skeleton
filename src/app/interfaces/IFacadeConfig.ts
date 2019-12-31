@@ -1,11 +1,11 @@
-import IController from './IController';
+import HandleFunction from "connect";
 
-type MiddlewareFunction = (...args: any[]) => void;
+import IController from "./IController";
 
 interface IFacadeConfig {
   port: number;
   controllers: IController[];
-  middleware: MiddlewareFunction[];
+  middleware: HandleFunction.NextHandleFunction[];
 }
 
 export default IFacadeConfig;
