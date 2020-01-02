@@ -1,8 +1,8 @@
-import HandleFunction from "connect";
-import express, { Application } from "express";
+import HandleFunction from 'connect';
+import express, { Application } from 'express';
 
-import IController from "../interfaces/IController";
-import IFacadeConfig from "../interfaces/IFacadeConfig";
+import IController from '../interfaces/IController';
+import IFacadeConfig from '../interfaces/IFacadeConfig';
 
 class ExpressFacade {
 
@@ -20,8 +20,8 @@ class ExpressFacade {
   }
 
   private config(config: IFacadeConfig) {
-    const assignMiddleware = (item: HandleFunction.NextHandleFunction) => {
-      this.app.use(item);
+    const assignMiddleware = (middleware: HandleFunction.NextHandleFunction) => {
+      this.app.use(middleware);
     };
     const assignRoutes = (controller: IController) => {
       this.app.use(controller.path, controller.router);
