@@ -1,4 +1,4 @@
-import ExpressFacade from "./app/facade/ExpressFacade";
+import ExpressFacade from "./app/facades/ExpressFacade";
 import config from "./config";
 
 // init and start server
