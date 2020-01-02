@@ -1,8 +1,8 @@
-import HandleFunction from 'connect';
-import express, { Application } from 'express';
+import HandleFunction from "connect";
+import express, { Application } from "express";
 
-import IController from '../interfaces/IController';
-import IFacadeConfig from '../interfaces/IFacadeConfig';
+import IController from "../interfaces/IController";
+import IFacadeConfig from "../interfaces/IFacadeConfig";
 
 class ExpressFacade {
 

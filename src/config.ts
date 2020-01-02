@@ -1,12 +1,12 @@
-import * as bodyParser from 'body-parser';
-import expressWinston from 'express-winston';
-import winston from 'winston';
+import * as bodyParser from "body-parser";
+import expressWinston, { LoggerOptions } from "express-winston";
+import winston from "winston";
 
-import Controller from './app/controllers/Controller';
-import IFacadeConfig from './app/interfaces/IFacadeConfig';
+import Controller from "./app/controllers/Controller";
+import IFacadeConfig from "./app/interfaces/IFacadeConfig";
 
 // logging middleware config
-const loggerConfig = {
+const loggerConfig: LoggerOptions = {
   colorize: false,
   expressFormat: true,
   format: winston.format.combine(
